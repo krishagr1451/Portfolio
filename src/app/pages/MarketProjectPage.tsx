@@ -48,7 +48,7 @@ export default function MarketProjectPage() {
           <p className="text-xs sm:text-sm uppercase tracking-[0.24em] text-emerald-700 font-semibold">Project Case Study</p>
           <h1 className="text-4xl sm:text-5xl font-bold">Grain Merchant Manager</h1>
           <p className="text-lg text-slate-700 max-w-4xl leading-relaxed">
-            A Tally-style grain business manager with role-based auth, transaction ledgering, reports, receipts, and due-payment tracking.
+            A Tally-style business management web app for grain merchants with protected auth, transaction ledgering, analytics cards, and due-payment tracking.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
             <a href="https://market-marb.onrender.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 text-white px-5 py-3 text-sm font-semibold hover:bg-emerald-700 transition-colors">
@@ -65,12 +65,36 @@ export default function MarketProjectPage() {
         <section className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold">Highlights</h2>
           <ul className="mt-4 space-y-2 text-slate-700 leading-relaxed">
-            <li>Public entry is a clean login page with username/password authentication.</li>
-            <li>Direct links to dashboard and reports are guarded and redirect unauthenticated users to sign-in.</li>
-            <li>Protected pages and APIs with cookie-based auth and role-aware access controls.</li>
-            <li>Ledger operations with add/edit/delete, payment tracking, and outstanding views.</li>
-            <li>Reporting module with party statements, trend metrics, and export-oriented flows.</li>
-            <li>Node.js + Express backend with SQLite and optional Supabase/Postgres migration support.</li>
+            <li>Login authentication with protected pages and APIs.</li>
+            <li>Transaction lifecycle support: add, edit, and delete grain entries.</li>
+            <li>Ledger fields include seller, buyer, town, grain type, price, quantity, payment period, and commission percent (aadat).</li>
+            <li>Extra operational fields: payment status, invoice number, and notes.</li>
+            <li>Auto-calculated metrics: gross amount, commission amount, net amount, and due date.</li>
+            <li>Dashboard summary cards for total transactions, gross, commission, pending payments, and due-in-7-days.</li>
+            <li>Filtering tools for text search, date ranges, and payment status.</li>
+            <li>Mobile responsive UI for daily business usage across devices.</li>
+          </ul>
+        </section>
+
+        <section className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold">Tech Stack & Data</h2>
+          <ul className="mt-4 space-y-2 text-slate-700 leading-relaxed">
+            <li>Backend: Node.js + Express.</li>
+            <li>Database: SQLite file storage (`data/grain_business.db`).</li>
+            <li>Frontend: HTML, CSS, and JavaScript with responsive layouts.</li>
+            <li>Runtime database mode can be switched between SQLite and Supabase/Postgres.</li>
+            <li>Migration scripts are included for Supabase schema setup and data transfer.</li>
+          </ul>
+        </section>
+
+        <section className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
+          <h2 className="text-2xl font-semibold">Core API Endpoints</h2>
+          <ul className="mt-4 space-y-2 text-slate-700 leading-relaxed">
+            <li>GET /api/transactions</li>
+            <li>POST /api/transactions</li>
+            <li>PUT /api/transactions/:id</li>
+            <li>DELETE /api/transactions/:id</li>
+            <li>GET /api/summary</li>
           </ul>
         </section>
 

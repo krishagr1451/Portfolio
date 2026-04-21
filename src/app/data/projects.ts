@@ -54,8 +54,8 @@ export const projects: Project[] = [
     title: "Grain Merchant Manager",
     subtitle: "Tally-style ledger and reporting web app",
     summary:
-      "A business management app for grain merchants with protected routes, ledger operations, statements, and due-payment tracking.",
-    stack: ["Node.js", "Express", "SQLite", "HTML", "CSS", "JavaScript"],
+      "A grain merchant business manager with protected auth, CRUD ledger transactions, auto calculations, due tracking, and dashboard analytics.",
+    stack: ["Node.js", "Express", "SQLite", "HTML", "CSS", "JavaScript", "Supabase (migration-ready)"],
     featured: true,
     links: {
       live: "https://market-marb.onrender.com",
