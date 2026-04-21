@@ -1,8 +1,35 @@
 import { motion } from "motion/react";
 import { ArrowRight, Github, Linkedin, Mail, Download } from "lucide-react";
 import logo from "../assets/46a5b19d189626a606e954cf6435ae16ff86fc69.png";
+import ProjectsPage from "./pages/ProjectsPage";
+import CarePathCentralPage from "./pages/CarePathCentralPage";
+import SEProjectPage from "./pages/SEProjectPage";
+import DBMSProjectPage from "./pages/DBMSProjectPage";
+import MarketProjectPage from "./pages/MarketProjectPage";
 
 export default function App() {
+  const pathname = window.location.pathname;
+
+  if (pathname === "/projects") {
+    return <ProjectsPage />;
+  }
+
+  if (pathname === "/projects/carepath-central") {
+    return <CarePathCentralPage />;
+  }
+
+  if (pathname === "/projects/se-project") {
+    return <SEProjectPage />;
+  }
+
+  if (pathname === "/projects/dbms-project") {
+    return <DBMSProjectPage />;
+  }
+
+  if (pathname === "/projects/market") {
+    return <MarketProjectPage />;
+  }
+
   const sectionViewport = { once: true, amount: 0.25 };
 
   const containerVariants = {
@@ -23,7 +50,7 @@ export default function App() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1],
       },
     },
   };
@@ -35,7 +62,7 @@ export default function App() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut",
+        ease: [0.22, 1, 0.36, 1],
       },
     },
   };
@@ -89,10 +116,15 @@ export default function App() {
           transition={{ delay: 0.5, duration: 0.6 }}
           className="hidden md:flex gap-8 lg:gap-10 z-10"
         >
-          {["About", "Projects", "Skills", "Contact"].map((item, index) => (
+          {[
+            { label: "About", href: "#about" },
+            { label: "Projects", href: "/projects" },
+            { label: "Skills", href: "#skills" },
+            { label: "Contact", href: "#contact" },
+          ].map((item, index) => (
             <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               initial={{ y: -20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.6 + index * 0.1, duration: 0.4 }}
@@ -100,7 +132,7 @@ export default function App() {
               whileTap={{ scale: 0.95 }}
               className="text-base font-semibold text-slate-700 hover:text-cyan-600 transition-colors cursor-pointer relative group"
             >
-              {item}
+              {item.label}
               <motion.span
                 className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
                 initial={{ width: 0 }}
@@ -225,7 +257,7 @@ export default function App() {
                     transition={{ delay: 1.2 }}
                     className="text-cyan-100/90 text-lg tracking-wider font-light"
                   >
-                    Your Photo Here
+                  
                   </motion.p>
                 </div>
               </motion.div>
@@ -352,7 +384,8 @@ export default function App() {
 
             {/* CTA Buttons */}
             <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
-              <motion.button
+              <motion.a
+                href="/projects"
                 whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(6, 182, 212, 0.3)" }}
                 whileTap={{ scale: 0.98 }}
                 className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-lg font-medium flex items-center justify-center gap-2 shadow-lg hover:from-cyan-700 hover:to-blue-700 transition-all"
@@ -364,7 +397,7 @@ export default function App() {
                 >
                   <ArrowRight className="w-5 h-5" />
                 </motion.span>
-              </motion.button>
+              </motion.a>
 
               <motion.button
                 whileHover={{ scale: 1.05, borderColor: "#06b6d4" }}
