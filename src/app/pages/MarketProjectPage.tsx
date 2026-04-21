@@ -5,19 +5,19 @@ import logo from "../../assets/46a5b19d189626a606e954cf6435ae16ff86fc69.png";
 
 const screenshots = [
   {
-    title: "Market Repository",
-    caption: "Grain Merchant Manager repository preview.",
-    image: "https://opengraph.githubassets.com/21/krishagr1451/Market",
+    title: "Live Login Screen",
+    caption: "Public landing view on the deployed app with secure sign-in form.",
+    image: "https://image.thum.io/get/width/1200/https://market-marb.onrender.com/",
   },
   {
-    title: "Dashboard UI",
-    caption: "Dashboard route and summary layout for transactions and due payments.",
-    image: "https://opengraph.githubassets.com/22/krishagr1451/Market/blob/main/public/pages/dashboard.html",
+    title: "Protected Dashboard Route",
+    caption: "Direct access to /dashboard redirects to authenticated login flow.",
+    image: "https://image.thum.io/get/width/1200/https://market-marb.onrender.com/dashboard",
   },
   {
-    title: "Reports Module",
-    caption: "Reports section including statement and analytics views.",
-    image: "https://opengraph.githubassets.com/23/krishagr1451/Market/blob/main/public/pages/reports.html",
+    title: "Protected Reports Route",
+    caption: "Reports area is role-protected and only visible after sign-in.",
+    image: "https://image.thum.io/get/width/1200/https://market-marb.onrender.com/reports",
   },
 ];
 
@@ -48,6 +48,10 @@ export default function MarketProjectPage() {
             A Tally-style grain business manager with role-based auth, transaction ledgering, reports, receipts, and due-payment tracking.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
+            <a href="https://market-marb.onrender.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 text-white px-5 py-3 text-sm font-semibold hover:bg-emerald-700 transition-colors">
+              Live Demo
+              <ExternalLink className="h-4 w-4" />
+            </a>
             <a href="https://github.com/krishagr1451/Market" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white px-5 py-3 text-sm font-semibold hover:bg-slate-800 transition-colors">
               View Repository
               <Github className="h-4 w-4" />
@@ -58,6 +62,8 @@ export default function MarketProjectPage() {
         <section className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8">
           <h2 className="text-2xl font-semibold">Highlights</h2>
           <ul className="mt-4 space-y-2 text-slate-700 leading-relaxed">
+            <li>Public entry is a clean login page with username/password authentication.</li>
+            <li>Direct links to dashboard and reports are guarded and redirect unauthenticated users to sign-in.</li>
             <li>Protected pages and APIs with cookie-based auth and role-aware access controls.</li>
             <li>Ledger operations with add/edit/delete, payment tracking, and outstanding views.</li>
             <li>Reporting module with party statements, trend metrics, and export-oriented flows.</li>

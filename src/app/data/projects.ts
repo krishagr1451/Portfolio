@@ -58,6 +58,7 @@ export const projects: Project[] = [
     stack: ["Node.js", "Express", "SQLite", "HTML", "CSS", "JavaScript"],
     featured: true,
     links: {
+      live: "https://market-marb.onrender.com",
       repo: "https://github.com/krishagr1451/Market",
     },
   },
