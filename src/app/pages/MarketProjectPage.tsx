@@ -2,22 +2,25 @@ import { motion } from "motion/react";
 import { ArrowLeft, ExternalLink, Github } from "lucide-react";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import logo from "../../assets/46a5b19d189626a606e954cf6435ae16ff86fc69.png";
+import marketLogin from "../../assets/projects/market/login.png";
+import marketDashboard from "../../assets/projects/market/dashboard.png";
+import marketReports from "../../assets/projects/market/reports.png";
 
 const screenshots = [
   {
-    title: "Live Login Screen",
-    caption: "Public landing view on the deployed app with secure sign-in form.",
-    image: "https://image.thum.io/get/width/1200/https://market-marb.onrender.com/",
+    title: "Login Screen",
+    caption: "Captured from the deployed app before authentication.",
+    image: marketLogin,
   },
   {
-    title: "Protected Dashboard Route",
-    caption: "Direct access to /dashboard redirects to authenticated login flow.",
-    image: "https://image.thum.io/get/width/1200/https://market-marb.onrender.com/dashboard",
+    title: "Dashboard (After Login)",
+    caption: "Authenticated dashboard view after signing in as admin.",
+    image: marketDashboard,
   },
   {
-    title: "Protected Reports Route",
-    caption: "Reports area is role-protected and only visible after sign-in.",
-    image: "https://image.thum.io/get/width/1200/https://market-marb.onrender.com/reports",
+    title: "Reports (After Login)",
+    caption: "Authenticated reports section from the live deployment.",
+    image: marketReports,
   },
 ];
 
