@@ -133,10 +133,10 @@ export default function App() {
           className="hidden md:flex gap-8 lg:gap-10 z-10"
         >
           {[
-            { label: "About", href: "#about" },
+            { label: "About", href: "/about" },
             { label: "Projects", href: "/projects" },
-            { label: "Skills", href: "#skills" },
-            { label: "Contact", href: "#contact" },
+            { label: "Skills", href: "/skills" },
+            { label: "Contact", href: "/contact" },
           ].map((item, index) => (
             <motion.a
               key={item.label}
