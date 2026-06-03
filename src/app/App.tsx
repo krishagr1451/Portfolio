@@ -6,10 +6,13 @@ import CarePathCentralPage from "./pages/CarePathCentralPage";
 import SEProjectPage from "./pages/SEProjectPage";
 import DBMSProjectPage from "./pages/DBMSProjectPage";
 import MarketProjectPage from "./pages/MarketProjectPage";
+import AboutPage from "./pages/AboutPage";
+import SkillsPage from "./pages/SkillsPage";
+import ContactPage from "./pages/ContactPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 export default function App() {
   const pathname = window.location.pathname;
-
   if (pathname === "/projects") {
     return <ProjectsPage />;
   }
@@ -28,6 +31,18 @@ export default function App() {
 
   if (pathname === "/projects/market") {
     return <MarketProjectPage />;
+  }
+
+  if (pathname === "/about") {
+    return <AboutPage />;
+  }
+
+  if (pathname === "/skills") {
+    return <SkillsPage />;
+  }
+
+  if (pathname === "/contact") {
+    return <ContactPage />;
   }
 
   const sectionViewport = { once: true, amount: 0.25 };
@@ -67,7 +82,8 @@ export default function App() {
     },
   };
 
-  return (
+  if (pathname === "/") {
+    return (
     <div className="bg-white min-h-screen flex flex-col">
       {/* Header */}
       <motion.header
@@ -463,5 +479,8 @@ export default function App() {
         />
       </motion.div>
     </div>
-  );
+    );
+  }
+
+  return <NotFoundPage />;
 }
