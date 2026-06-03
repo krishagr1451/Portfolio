@@ -7,7 +7,7 @@ const skills = [
   { name: "Tailwind CSS", level: "Advanced" },
   { name: "Node.js", level: "Intermediate" },
   { name: "Flask", level: "Intermediate" },
-  { name: "NLP", level: "Intermediate" },
+  { name: "Design Research", level: "Intermediate" },
 ];
 
 export default function SkillsPage() {
@@ -32,17 +32,29 @@ export default function SkillsPage() {
           <p className="text-lg text-slate-700 max-w-3xl leading-relaxed">Technical skills, tools, and design capabilities used across projects.</p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            {skills.map((s) => (
-              <div key={s.name} className="rounded-2xl border border-slate-200 bg-white p-6">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-semibold">{s.name}</h3>
-                  <div className="text-sm text-slate-600">{s.level}</div>
-                </div>
-                <div className="mt-3 h-2 bg-slate-100 rounded-full overflow-hidden">
-                  <div className="h-full bg-cyan-600" style={{ width: s.level === "Advanced" ? "90%" : s.level === "Intermediate" ? "60%" : "30%" }} />
-                </div>
-              </div>
-            ))}
+            {skills.map((s, idx) => (
+                <motion.div
+                  key={s.name}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: idx * 0.06 }}
+                  whileHover={{ scale: 1.02, y: -4 }}
+                  className="rounded-2xl border border-slate-200 bg-white p-6"
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-lg font-semibold">{s.name}</h3>
+                    <div className="text-sm text-slate-600">{s.level}</div>
+                  </div>
+                  <div className="mt-3 h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-cyan-600"
+                      initial={{ width: 0 }}
+                      animate={{ width: s.level === "Advanced" ? "90%" : s.level === "Intermediate" ? "60%" : "30%" }}
+                      transition={{ duration: 0.6 }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
           </div>
         </motion.section>
       </main>

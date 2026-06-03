@@ -362,7 +362,7 @@ export default function App() {
                 I'm a Computer Science student at Sardar Patel Institute of Technology with a passion for creating intelligent web applications. Currently pursuing a minor in UI/UX Design from Pearl Academy, I blend technical expertise with design thinking.
               </p>
               <p className="text-base text-slate-600 leading-relaxed">
-                Specializing in full-stack development with React, Node.js, and Flask, alongside expertise in NLP and database-driven applications. I create solutions that are both functional and user-friendly.
+                Specializing in full-stack development with React, Node.js, and Flask, alongside expertise in data-driven and database applications. I create solutions that are both functional and user-friendly.
               </p>
             </motion.div>
 

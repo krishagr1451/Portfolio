@@ -26,23 +26,23 @@ export default function AboutPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-2xl border border-slate-200 bg-white p-6">
               <h2 className="text-xl font-semibold">Background</h2>
               <p className="mt-3 text-slate-700 leading-relaxed">
                 Coursework in algorithms, databases, and systems; practical experience building full-stack apps. Currently pursuing a UI/UX minor
                 to improve product design and research skills.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <motion.div whileHover={{ scale: 1.02, y: -4 }} className="rounded-2xl border border-slate-200 bg-white p-6">
               <h2 className="text-xl font-semibold">Interests</h2>
               <ul className="mt-3 list-disc list-inside text-slate-700">
                 <li>Full-stack web development</li>
                 <li>Design systems & interaction design</li>
-                <li>Natural Language Processing</li>
+                <li>Design Research</li>
                 <li>Product thinking and prototyping</li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </motion.section>
       </main>

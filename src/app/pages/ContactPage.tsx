@@ -24,17 +24,24 @@ export default function ContactPage() {
           <p className="text-lg text-slate-700 max-w-3xl leading-relaxed">I'd love to hear about opportunities, collaborations, or questions.</p>
 
           <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl border border-slate-200 bg-white p-6">
               <h2 className="text-xl font-semibold">Email</h2>
               <a href="mailto:krish.agrawal23@spit.ac.in" className="inline-flex items-center gap-2 mt-3 text-cyan-700 font-medium">
                 <Mail className="w-4 h-4" /> krish.agrawal23@spit.ac.in
               </a>
-            </div>
+            </motion.div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+            <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl border border-slate-200 bg-white p-6">
               <h2 className="text-xl font-semibold">Message</h2>
               <p className="mt-3 text-slate-700">You can also reach out via LinkedIn or GitHub for project inquiries and collaborations.</p>
-            </div>
+
+              <form className="mt-4 space-y-3">
+                <motion.input whileFocus={{ scale: 1.01 }} className="w-full border border-slate-200 rounded-md px-3 py-2" placeholder="Your name" />
+                <motion.input whileFocus={{ scale: 1.01 }} className="w-full border border-slate-200 rounded-md px-3 py-2" placeholder="Your email" />
+                <motion.textarea whileFocus={{ scale: 1.01 }} className="w-full border border-slate-200 rounded-md px-3 py-2 h-28" placeholder="Message" />
+                <motion.button whileHover={{ scale: 1.03 }} className="px-4 py-2 bg-cyan-600 text-white rounded-md">Send (demo)</motion.button>
+              </form>
+            </motion.div>
           </div>
         </motion.section>
       </main>
