@@ -53,10 +53,10 @@ const siteScreens = [
 export default function CarePathCentralPage() {
   if (!carePath) {
     return (
-      <div className="min-h-screen grid place-items-center px-6 text-center">
+      <div className="min-h-screen grid place-items-center bg-[#050507] px-6 text-center text-zinc-100">
         <div>
-          <h1 className="text-3xl font-bold text-slate-900">Project Not Found</h1>
-          <a href="/projects" className="text-cyan-700 hover:text-cyan-800 mt-4 inline-block">
+          <h1 className="text-3xl font-bold text-white">Project Not Found</h1>
+          <a href="/projects" className="mt-4 inline-block text-cyan-300 hover:text-cyan-200">
             Back to projects
           </a>
         </div>
@@ -65,24 +65,24 @@ export default function CarePathCentralPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_15%_10%,#cffafe_0%,transparent_35%),radial-gradient(circle_at_80%_15%,#dbeafe_0%,transparent_30%),linear-gradient(120deg,#f8fafc_0%,#ffffff_45%,#ecfeff_100%)] text-slate-900">
-      <header className="sticky top-0 z-10 backdrop-blur-md bg-white/80 border-b border-slate-200/70">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_15%_10%,rgba(229,9,20,0.12)_0%,transparent_35%),radial-gradient(circle_at_80%_15%,rgba(255,255,255,0.05)_0%,transparent_30%),linear-gradient(180deg,#050507_0%,#0c0c0c_100%)] text-zinc-100">
+      <header className="sticky top-0 z-10 backdrop-blur-xl bg-black/70 border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 py-5 flex items-center justify-between gap-4">
           <a href="/" className="inline-flex items-center gap-3 group">
             <img src={logo} alt="Krish Agrawal Logo" className="h-10 sm:h-12 w-auto" />
-            <span className="text-sm font-semibold text-slate-700 group-hover:text-cyan-700 transition-colors">Portfolio</span>
+            <span className="text-sm font-semibold text-zinc-300 group-hover:text-white transition-colors">Portfolio</span>
           </a>
           <div className="flex items-center gap-2">
             <a
               href="/projects"
-              className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-cyan-700 transition-colors px-3 py-2 rounded-lg hover:bg-cyan-50"
+              className="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
             >
               <ArrowLeft className="h-4 w-4" />
               All Projects
             </a>
             <a
               href="/"
-              className="text-sm font-medium text-slate-500 hover:text-slate-700 transition-colors px-3 py-2 rounded-lg hover:bg-slate-100"
+              className="text-sm font-medium text-zinc-400 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-white/5"
             >
               Home
             </a>
@@ -97,9 +97,9 @@ export default function CarePathCentralPage() {
           transition={{ duration: 0.45 }}
           className="space-y-5"
         >
-          <p className="text-xs sm:text-sm uppercase tracking-[0.24em] text-cyan-700 font-semibold">Healthcare Platform Case Study</p>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-slate-900">{carePath.title}</h1>
-          <p className="text-lg sm:text-xl text-slate-700 max-w-4xl leading-relaxed">{carePath.summary}</p>
+          <p className="text-xs sm:text-sm uppercase tracking-[0.24em] text-cyan-400 font-semibold">Healthcare Platform Case Study</p>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">{carePath.title}</h1>
+          <p className="text-lg sm:text-xl text-zinc-300 max-w-4xl leading-relaxed">{carePath.summary}</p>
 
           <div className="flex flex-wrap gap-3 pt-2">
             {carePath.links.live ? (
@@ -107,7 +107,7 @@ export default function CarePathCentralPage() {
                 href={carePath.links.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white px-5 py-3 text-sm font-semibold hover:bg-slate-800 transition-colors"
+                className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-600 to-blue-600 text-white px-5 py-3 text-sm font-semibold hover:from-cyan-500 hover:to-blue-500 transition-colors"
               >
                 Open Live Project
                 <ExternalLink className="h-4 w-4" />
@@ -115,7 +115,7 @@ export default function CarePathCentralPage() {
             ) : null}
             <a
               href="/projects"
-              className="inline-flex items-center gap-2 rounded-lg border border-slate-300 text-slate-700 px-5 py-3 text-sm font-semibold hover:border-cyan-500 hover:text-cyan-700 transition-colors"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/15 text-zinc-200 px-5 py-3 text-sm font-semibold hover:border-cyan-500/50 hover:text-white transition-colors"
             >
               Explore More Projects
             </a>
@@ -137,13 +137,13 @@ export default function CarePathCentralPage() {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.14 + index * 0.05, duration: 0.35 }}
-                className="rounded-2xl border border-slate-200 bg-white/90 shadow-sm p-6"
+                className="rounded-2xl border border-white/10 bg-white/5 shadow-sm p-6 backdrop-blur-sm"
               >
-                <div className="inline-flex p-2.5 rounded-xl bg-cyan-100 text-cyan-800">
+                <div className="inline-flex p-2.5 rounded-xl bg-cyan-500/15 text-cyan-300">
                   <Icon className="h-5 w-5" />
                 </div>
-                <h2 className="text-xl font-semibold mt-4 text-slate-900">{feature.title}</h2>
-                <p className="text-slate-600 mt-2 leading-relaxed">{feature.text}</p>
+                <h2 className="text-xl font-semibold mt-4 text-white">{feature.title}</h2>
+                <p className="text-zinc-300 mt-2 leading-relaxed">{feature.text}</p>
               </motion.article>
             );
           })}
@@ -156,8 +156,8 @@ export default function CarePathCentralPage() {
           className="space-y-5"
         >
           <div>
-            <h3 className="text-2xl font-semibold text-slate-900">Site Screens</h3>
-            <p className="text-slate-600 mt-2">Real captures from the running CarePath app including homepage, login, and landing routes.</p>
+            <h3 className="text-2xl font-semibold text-white">Site Screens</h3>
+            <p className="text-zinc-300 mt-2">Real captures from the running CarePath app including homepage, login, and landing routes.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
@@ -167,7 +167,7 @@ export default function CarePathCentralPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.18 + index * 0.06, duration: 0.35 }}
-                className="rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-sm"
+                className="rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-sm"
               >
                 <ImageWithFallback
                   src={screen.image}
@@ -176,8 +176,8 @@ export default function CarePathCentralPage() {
                   loading="lazy"
                 />
                 <div className="p-4">
-                  <h4 className="text-base font-semibold text-slate-900">{screen.title}</h4>
-                  <p className="text-sm text-cyan-700 mt-1">Route: {screen.route}</p>
+                  <h4 className="text-base font-semibold text-white">{screen.title}</h4>
+                  <p className="text-sm text-cyan-300 mt-1">Route: {screen.route}</p>
                 </div>
               </motion.article>
             ))}
@@ -189,10 +189,10 @@ export default function CarePathCentralPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.4 }}
-            className="lg:col-span-3 rounded-2xl border border-slate-200 bg-white p-6 sm:p-8"
+            className="lg:col-span-3 rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 backdrop-blur-sm"
           >
-            <h3 className="text-2xl font-semibold text-slate-900">Architecture Snapshot</h3>
-            <ul className="mt-4 space-y-3 text-slate-700 leading-relaxed">
+            <h3 className="text-2xl font-semibold text-white">Architecture Snapshot</h3>
+            <ul className="mt-4 space-y-3 text-zinc-300 leading-relaxed">
               <li>Frontend in React + TypeScript handles role-based routing, dashboards, forms, and protected views.</li>
               <li>Supabase provides auth, row-level security, table storage, and file storage policies by user role.</li>
               <li>Flask backend serves health checks, patient dataset retrieval, AI medical chat, and notification endpoints.</li>
@@ -204,16 +204,16 @@ export default function CarePathCentralPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.24, duration: 0.4 }}
-            className="lg:col-span-2 rounded-2xl border border-cyan-200 bg-cyan-50/80 p-6 sm:p-8"
+            className="lg:col-span-2 rounded-2xl border border-cyan-500/20 bg-cyan-500/10 p-6 sm:p-8 backdrop-blur-sm"
           >
-            <div className="inline-flex p-2.5 rounded-xl bg-cyan-200 text-cyan-900">
+            <div className="inline-flex p-2.5 rounded-xl bg-cyan-500/15 text-cyan-300">
               <FlaskConical className="h-5 w-5" />
             </div>
-            <h3 className="text-2xl font-semibold mt-4 text-slate-900">Quality & Validation</h3>
-            <p className="text-slate-700 mt-3 leading-relaxed">Documented with 129 test conditions and reported all-pass status across security, workflows, session handling, policies, and edge-case behavior.</p>
+            <h3 className="text-2xl font-semibold mt-4 text-white">Quality & Validation</h3>
+            <p className="text-zinc-300 mt-3 leading-relaxed">Documented with 129 test conditions and reported all-pass status across security, workflows, session handling, policies, and edge-case behavior.</p>
             <div className="mt-5 flex flex-wrap gap-2">
               {["Vitest", "Testing Library", "MSW", "RLS Policies", "RBAC"].map((tag) => (
-                <span key={tag} className="px-2.5 py-1 rounded-full bg-white text-cyan-800 text-xs font-semibold border border-cyan-200">
+                <span key={tag} className="px-2.5 py-1 rounded-full bg-white/5 text-zinc-200 text-xs font-semibold border border-white/10">
                   {tag}
                 </span>
               ))}
@@ -225,10 +225,10 @@ export default function CarePathCentralPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.45 }}
-          className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-8"
+          className="rounded-2xl border border-white/10 bg-white/5 p-6 sm:p-8 backdrop-blur-sm"
         >
-          <h3 className="text-2xl font-semibold text-slate-900">Typical User Flow</h3>
-          <ol className="mt-4 space-y-3 text-slate-700 leading-relaxed list-decimal list-inside">
+          <h3 className="text-2xl font-semibold text-white">Typical User Flow</h3>
+          <ol className="mt-4 space-y-3 text-zinc-300 leading-relaxed list-decimal list-inside">
             <li>User signs in and gets routed by role.</li>
             <li>Doctor creates and updates patient records.</li>
             <li>Patient views own history, reports, and records.</li>
