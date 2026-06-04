@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="1800" viewBox="0 0 1200 1800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <style>
+      .bg{fill:#07111a}
+      .card{fill:#06121a;stroke:#ffffff1a;stroke-width:1}
+      .accent{fill:url(#g1)}
+      .title{font-family:Inter, Arial, sans-serif; font-size:34px; fill:#e6f6fb; font-weight:700}
+      .subtitle{font-family:Inter, Arial, sans-serif; font-size:18px; fill:#9fbfcc}
+      .stepTitle{font-family:Inter, Arial, sans-serif; font-size:20px; fill:#e6f6fb; font-weight:600}
+      .stepText{font-family:Inter, Arial, sans-serif; font-size:14px; fill:#b7cfd6}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="1800" rx="16"/>
+
+  <!-- Header -->
+  <g transform="translate(80,60)">
+    <rect x="0" y="0" width="1040" height="140" rx="14" class="card" />
+    <text x="28" y="48" class="title">Figma → Live site</text>
+    <text x="28" y="86" class="subtitle">Process journey: research, design, handoff, build, iterate, deploy</text>
+    <rect x="920" y="18" width="80" height="80" rx="12" fill="url(#g1)" />
+    <text x="944" y="72" font-family="Inter, Arial" font-size="12" fill="#021018">PORTFOLIO</text>
+  </g>
+
+  <!-- Vertical timeline line -->
+  <g transform="translate(160,240)">
+    <rect x="160" y="0" width="6" height="1360" rx="3" fill="#0e2b36" />
+    <rect x="160" y="0" width="6" height="1360" rx="3" fill="url(#g1)" opacity="0.25" />
+
+    <!-- Steps -->
+    <!-- Step 1 -->
+    <g transform="translate(-40,0)">
+      <circle cx="200" cy="40" r="28" class="accent" />
+      <text x="260" y="28" class="stepTitle">Research</text>
+      <text x="260" y="52" class="stepText">Goals, audience, competitive analysis, constraints</text>
+    </g>
+
+    <!-- Step 2 -->
+    <g transform="translate(-40,160)">
+      <circle cx="200" cy="40" r="28" class="accent" />
+      <text x="260" y="28" class="stepTitle">Wireframes</text>
+      <text x="260" y="52" class="stepText">Low‑fidelity flows, content hierarchy and layouts</text>
+    </g>
+
+    <!-- Step 3 -->
+    <g transform="translate(-40,320)">
+      <circle cx="200" cy="40" r="28" class="accent" />
+      <text x="260" y="28" class="stepTitle">Design</text>
+      <text x="260" y="52" class="stepText">High‑fidelity screens, tokens, responsive rules</text>
+    </g>
+
+    <!-- Step 4 -->
+    <g transform="translate(-40,480)">
+      <circle cx="200" cy="40" r="28" class="accent" />
+      <text x="260" y="28" class="stepTitle">Prototype</text>
+      <text x="260" y="52" class="stepText">Clickable flows in Figma — usability checks</text>
+    </g>
+
+    <!-- Step 5 -->
+    <g transform="translate(-40,640)">
+      <circle cx="200" cy="40" r="28" class="accent" />
+      <text x="260" y="28" class="stepTitle">Handoff</text>
+      <text x="260" y="52" class="stepText">Export tokens, specs, and component notes for dev</text>
+    </g>
+
+    <!-- Step 6 -->
+    <g transform="translate(-40,800)">
+      <circle cx="200" cy="40" r="28" class="accent" />
+      <text x="260" y="28" class="stepTitle">Build</text>
+      <text x="260" y="52" class="stepText">Componentize, implement tokens, responsive breakpoints</text>
+    </g>
+
+    <!-- Step 7 -->
+    <g transform="translate(-40,960)">
+      <circle cx="200" cy="40" r="28" class="accent" />
+      <text x="260" y="28" class="stepTitle">Test &amp; Iterate</text>
+      <text x="260" y="52" class="stepText">Cross‑browser checks, accessibility, performance tweaks</text>
+    </g>
+
+    <!-- Step 8 -->
+    <g transform="translate(-40,1120)">
+      <circle cx="200" cy="40" r="28" class="accent" />
+      <text x="260" y="28" class="stepTitle">Deploy</text>
+      <text x="260" y="52" class="stepText">CI build, production deploy, monitor &amp; iterate</text>
+    </g>
+
+  </g>
+
+  <!-- Footer notes -->
+  <g transform="translate(80,1660)">
+    <text x="0" y="0" font-family="Inter, Arial" font-size="12" fill="#8fbcc3">Deliverables: Figma files, tokens, React + Tailwind components, production site (Vercel/Vite)</text>
+    <text x="0" y="18" font-family="Inter, Arial" font-size="12" fill="#8fbcc3">Colors: cyan/blue tokens; Accessibility: contrast and keyboard-first interactions</text>
+  </g>
+</svg>
